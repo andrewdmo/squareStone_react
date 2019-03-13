@@ -166,7 +166,7 @@ input[type="button"]:focus {
   /*z-index: -1;*/
 }
 
-.current {
+.CURRENT {
   color: #8d8a7e !important;
 }
 
@@ -281,15 +281,16 @@ li,
 
 .menuBar {
   z-index: 5;
+  margin: 1vmin auto 0 auto;
+
   position: absolute;
   opacity: 1.2;
   height: 2.5rem;
   width: 100%;
   max-width: 95%;
   padding-right: 1vmin;
-  margin: 1vmin 0 0 0;
   left: 0;
-  bottom: 0;
+  top: 3vw;
   background: #8f3900;
   /*background: rgba(45, 45, 124, 0.87);*/
   background-size: cover;
@@ -327,7 +328,7 @@ li,
 /*}*/
 
 .menuText {
-  position: relative;
+  /*position: relative;*/
   opacity: .9;
   /*width: 100%;*/
   will-change: transform, color; /*keep here*/
@@ -433,7 +434,7 @@ li,
   margin-left: 0;
 }
 
-.none {
+.NONE {
   text-decoration: none !important;
   background-color: transparent !important;
 }
