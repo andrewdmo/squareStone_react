@@ -104,21 +104,12 @@ legend {
     /*z-index: 1;*/
 }
 
-/*button,*/
-/*.button {*/
-/*will-change: color, border;*/
-/*color: lightsteelblue;*/
-/*background-color: #ff7e27;*/
-/*border: transparent 1vw;*/
-/*margin: auto;*/
-/*box-sizing: border-box;*/
-/*}*/
 .button,
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-    will-change: color, border;
+    will-change: color, border, font-size;
 
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -126,9 +117,11 @@ input[type="button"] {
 
     color: palegoldenrod;
     background-color: #8d8a7e;
-    border: #073763 solid 2px;
-    margin: 0;
-    width: 100%;
+    border: #073763 solid 4px;
+    border-radius: 4px;
+    margin: 1vmin;
+    width: 75%;
+    font-size: large;
     vertical-align: center;
     transition: all .5s;
 }
@@ -138,10 +131,11 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-    color: #8f3900;
+    /*color: #8f3900;*/
     border: #8f3900 solid 2px;
+    font-size: x-large;
+
     overflow: visible;
-    transition: all .5s;
 
 }
 
@@ -150,11 +144,10 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-    color: #b8b23a;
-    border: #b8b23a solid 2px;
-    box-sizing: border-box;
+    /*color: #b8b23a;*/
+    /*border: #b8b23a solid 2px;*/
     transition: all .25s;
-
+    overflow: visible;
 }
 
 .clock {
@@ -231,17 +224,15 @@ li,
 
 .main.back {
     background: #073763;
-    border-radius: inherit;
     margin: 1vmin 0;
     /*padlding: 1vmin;*/
     /*float: right;*/
 }
 
 .main.text {
-    background-color: #cdcdcd;
     text-align: center;
     /*opacity: .95;*/
-    border-radius: inherit;
+    /*border-radius: inherit;*/
     margin: .5vmin;
     font-size: calc(1.5rem + 0.2vw);
 }
@@ -395,22 +386,22 @@ li,
     /*z-index: 6;*/
 }
 
-.middle.tabs {
-    margin-top: 5vh !important;
-    padding: 1vmin;
-    width: 100%;
-    max-width: 960px;
-    /*background: #bfbf56; !*test*!*/
-    background: linear-gradient(
-            to bottom right, lightsteelblue,
-            #8d8a7e) no-repeat fixed; /*X% how far gradient (middle) is*/
-    background-size: contain;
-    border: 2px solid #073763;
-    border-radius: 4px;
-    /*overflow: visible;*/
-    box-sizing: border-box;
+/*.middle.tabs {*/
+    /*margin-top: 5vh !important;*/
+    /*padding: 1vmin;*/
+    /*width: 100%;*/
+    /*max-width: 960px;*/
+    /*!*background: #bfbf56; !*test*!*!*/
+    /*background: linear-gradient(*/
+            /*to bottom right, lightsteelblue,*/
+            /*#8d8a7e) no-repeat fixed; !*X% how far gradient (middle) is*!*/
+    /*background-size: contain;*/
+    /*border: 2px solid #073763;*/
+    /*border-radius: 4px;*/
+    /*!*overflow: visible;*!*/
+    /*box-sizing: border-box;*/
 
-}
+/*}*/
 
 /*first 'copy' line:*/
 .middle.copyText {
