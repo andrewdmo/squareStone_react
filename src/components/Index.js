@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import IndexTop from "./IndexTop";
+import IndexMiddle from "./IndexMiddle";
+
 
 export default class Index extends Component {
 
@@ -7,6 +9,7 @@ export default class Index extends Component {
         return (
             <div className="container">
                 <IndexTop/>
+                <IndexMiddle/>
             </div>
         )
     }

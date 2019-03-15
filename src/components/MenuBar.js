@@ -1,5 +1,5 @@
-import Clock from "./IndexTop";
 import React, {Component} from "react";
+import Clock from "./Clock";
 
 
 export default class MenuBar extends Component {
@@ -11,7 +11,7 @@ export default class MenuBar extends Component {
 
     render() {
         return (
-            <div className="menuBar">
+            <div className="menuBar shadow">
                 <p className={this.state.page}>Home
                 </p>
 
@@ -20,6 +20,7 @@ export default class MenuBar extends Component {
 
                 <p className="menuText shadow NONE">About
                 </p>
+                <Clock/>
             </div>
         )
     }
