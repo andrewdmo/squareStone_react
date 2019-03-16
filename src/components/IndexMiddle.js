@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ButtonField from "./ButtonField";
+import Mapping from "./Mapping";
 
 
 export default class IndexMiddle extends Component {
@@ -8,7 +9,7 @@ export default class IndexMiddle extends Component {
         return (
             <div className="middle">
                 <ButtonField/>
-
+                <Mapping/>
             </div>
         )
     }

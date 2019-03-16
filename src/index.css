@@ -254,10 +254,10 @@ li,
 .mapArea {
     height: 30vh;
     width: 98%;
-    border-radius: 4px;
-    overflow: hidden;
+    overflow: visible;
     margin: 1vmin;
     padding: 1vmin;
+    border-radius: 4px;
 }
 
 .mapArea.topMarg {
@@ -380,30 +380,13 @@ li,
     /*lightsteelblue) no-repeat fixed; !*X% how far gradient (middle) is*!*/
     background: linear-gradient(
             to bottom right, lightsteelblue,
-            #8d8a7e) no-repeat fixed; /*X% how far gradient (middle) is*/    border: 2px solid #073763;
+            #8d8a7e) no-repeat fixed; /*X% how far gradient (middle) is*/
+    border: 2px solid #073763;
     border-radius: 4px;
     box-sizing: border-box;
     /*z-index: 6;*/
 }
 
-/*.middle.tabs {*/
-    /*margin-top: 5vh !important;*/
-    /*padding: 1vmin;*/
-    /*width: 100%;*/
-    /*max-width: 960px;*/
-    /*!*background: #bfbf56; !*test*!*!*/
-    /*background: linear-gradient(*/
-            /*to bottom right, lightsteelblue,*/
-            /*#8d8a7e) no-repeat fixed; !*X% how far gradient (middle) is*!*/
-    /*background-size: contain;*/
-    /*border: 2px solid #073763;*/
-    /*border-radius: 4px;*/
-    /*!*overflow: visible;*!*/
-    /*box-sizing: border-box;*/
-
-/*}*/
-
-/*first 'copy' line:*/
 .middle.copyText {
     margin: calc(3vh + 2em) 10vw 0 5vw;
     width: 100%;
