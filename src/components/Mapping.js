@@ -45,6 +45,7 @@ export default class Mapping extends Component {
 
         return (
             <div>
+                <h3>Mapping</h3>
 
                 <div className='mapArea topMarg'>
                     <Gmap coords={this.state.coords}

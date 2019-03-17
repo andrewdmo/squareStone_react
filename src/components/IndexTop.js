@@ -9,10 +9,9 @@ export default class IndexTop extends Component {
     render() {
         return (
             <div className="top">
-
+                <MenuBar/>
                 <TitleBar/>
                 <Logo/>
-                <MenuBar/>
             </div>
         )
     }
