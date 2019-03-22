@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import IndexTop from "./IndexTop";
 import Gmap from "./Gmap";
 
 
@@ -45,8 +44,6 @@ export default class Mapping extends Component {
 
         return (
             <div>
-                <h3>Mapping</h3>
-
                 <div className='mapArea topMarg'>
                     <Gmap coords={this.state.coords}
                           center={this.state.center}

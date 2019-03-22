@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ButtonField from "./ButtonField";
 
 export default class Error extends Component {
 
@@ -7,7 +6,6 @@ export default class Error extends Component {
         return (
             <div>
                 <h3>Error:</h3>
-                <ButtonField/>
             </div>
         )
     }

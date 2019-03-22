@@ -1,19 +1,21 @@
 import React, {Component} from "react";
-import IndexTop from "./IndexTop";
-import IndexMiddle from "./IndexMiddle";
-import {BrowserRouter} from "react-router-dom";
 
+import {Route, Switch} from "react-router-dom";
+import IndexCW from "./IndexCW";
+import Error from "./Error";
+import IndexSqSt from "./IndexSqSt";
 
 export default class Index extends Component {
 
     render() {
         return (
-            <BrowserRouter>
-                <div className="container">
-                    <IndexTop/>
-                    <IndexMiddle/>
-                </div>
-            </BrowserRouter>
+            <div className="container">
+                <Switch>
+                    <Route exact path={["/", "/index", "/home"]} component={IndexSqSt}/>
+                    <Route exact path="/truck" component={IndexCW}/>
+                    <Route path="*" component={Error}/>
+                </Switch>
+            </div>
         )
     }
 }

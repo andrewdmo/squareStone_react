@@ -1,6 +1,4 @@
-import {Route} from 'react-router-dom';
 import React, {Component} from 'react';
-import ButtonField from "./ButtonField";
 
 export default class About extends Component {
 
@@ -8,7 +6,10 @@ export default class About extends Component {
         return (
             <div>
                 <h3>About</h3>
-                <ButtonField/>
+                <p>Behold the world's finest Analysis Engine for Commercial Properties.</p>
+
+                <p>The oft-dreamt tool of architects, builders, and investors alike is here [in beta].
+                </p>
             </div>
 
         )

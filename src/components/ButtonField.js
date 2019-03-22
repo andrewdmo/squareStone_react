@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {NavLink} from "react-router-dom";
 
 
 export default class ButtonField extends Component {
@@ -6,12 +7,12 @@ export default class ButtonField extends Component {
     render() {
         return (
             <section className="main text">
-                <button>
+                <NavLink exact to="/purchase" className="button">
                     Purchase Costs
-                </button>
-                <button>
+                </NavLink>
+                <NavLink exact to="/revenue" className="button">
                     Revenue
-                </button>
+                </NavLink>
 
 
                 <button>

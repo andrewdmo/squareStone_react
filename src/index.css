@@ -22,30 +22,29 @@ code {
     /*border: .1vw solid black; !*TEST:*!*/
 }
 
-/*FROM JAVA*/
-/*html,*/
-/*body {*/
-/*!*background: #8e8a2d;*!*/
-/*background: linear-gradient(*/
-/*to bottom right, #ffffff,*/
-/*lightsteelblue 15%, #8d8a7e 95%) no-repeat fixed; !*background: url("../assets/IMG_4979.jpg") center fixed no-repeat;*!*/
-/*background-size: cover;*/
-/*min-height: 150vh;*/
-/*!*width: 100vmin;*!*/
-/*display: inline-block;*/
-/*!*box-sizing: content-box;*!*/
+table, .table {
+    /*empty-cells: show;*/
+    max-width: 95vw;
+    margin: 5vh auto 0 auto;
+}
 
-/*!* Minimum 16x, and grows more slowly*/
-/*(half the rate of screen growth)*!*/
-/*font-size: calc(12px + 0.5vw);*/
+div:first-child {
+    opacity: .99;
+}
 
-/*!* Line-height based on font-size,*/
-/*with addition viewport-relative growth*!*/
-/*line-height: calc(1.1em + 0.5vw);*/
-/*!*margin: .5em; !*CAREFUL*!*!*/
-/*transition: all .5s;*/
-/*overflow: visible;*/
-/*}*/
+.row {
+    opacity: 1;
+    transition: all 1s ease-in;
+}
+
+td, .td {
+    max-width: 45vw;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
 
 /*gMap scrolling:*/
 body.embed {
@@ -159,6 +158,9 @@ input[type="button"]:focus {
     /*top: 0;*/
 }
 
+.container {
+}
+
 .copy {
     margin: 1vmin;
     padding: 1vmin;
@@ -191,6 +193,26 @@ input[type="button"]:focus {
 .headShot:hover {
     will-change: transform;
     transform: scale(1.1);
+}
+
+.indexBack {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 150vmax;
+    background: linear-gradient(
+    to bottom right, lightsteelblue,
+    #8d8a7e) no-repeat fixed; /*X% how far gradient (middle) is*/
+}
+
+.indexBack.CW{
+    background-image: url('./assets/capturedWaste.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 30vh;
 }
 
 .index1 {
@@ -376,21 +398,15 @@ li,
 }
 
 .middle {
+    position: absolute;
     margin: calc(20vh) auto 0 auto;
-    min-height: 150vh;
+    height: 100%;
     width: 100%;
     max-width: 960px;
-    /*background: #bfbf56; !*test*!*/
-    /*background: linear-gradient(*/
-    /*to bottom, #F1F1F1,*/
-    /*lightsteelblue) no-repeat fixed; !*X% how far gradient (middle) is*!*/
-    background: linear-gradient(
-            to bottom right, lightsteelblue,
-            #8d8a7e) no-repeat fixed; /*X% how far gradient (middle) is*/
     border: 2px solid #073763;
     border-radius: 4px;
     box-sizing: border-box;
-    /*z-index: 6;*/
+    background: rgba(143, 57, 0, 0.1);
 }
 
 .middle.copyText {
@@ -403,6 +419,16 @@ li,
     margin: calc(3vh + 2em) 10vw 0 5vw;
     width: 100%;
     max-width: 70vw;
+}
+
+.middle.CW {
+    position: absolute;
+    /*z-index: 9;*/
+    margin: calc(20vh) auto 0 auto;
+    height: 100%;
+    max-width: 100%;
+    background: rgba(143, 57, 0, 0.1);
+
 }
 
 .middle.title {
@@ -596,9 +622,9 @@ tr:nth-child(even) {
 }
 
 .top {
-    background-color: rgba(161, 161, 161, 0.81);
+    position: fixed;
+    background: rgba(143, 57, 0, 0.1);
     height: 20vmin;
-
     border: 2px solid #073763;
     border-radius: 4px;
     width: 100%;
@@ -607,10 +633,13 @@ tr:nth-child(even) {
     right: 0;
     /*padding: 20px;*/
     /*color: white;*/
-    position: fixed;
-    z-index: 5;
+    /*z-index: 5;*/
     opacity: .85;
     padding: 2vh; /*TODO: improve*/
+}
+
+.top.CW {
+    /*z-index: -1;*/
 }
 
 .topLogo {
@@ -619,7 +648,7 @@ tr:nth-child(even) {
     left: 5vw;
     top: 3vh;
     opacity: .6;
-    z-index: 8;
+    /*z-index: 8;*/
     transition: all 1s;
     will-change: auto;
 }
@@ -632,6 +661,10 @@ tr:nth-child(even) {
     animation: App-logo-spin2 infinite 20s linear;
 }
 
+.topLogo.CW {
+    /*z-index: 1;*/
+}
+
 .top1 {
     height: 100%;
     position: relative;
@@ -640,6 +673,35 @@ tr:nth-child(even) {
 .top2 {
     /*width: 100%;*/
 }
+
+.truck {
+    position: absolute;
+    z-index: 10;
+    transition: all 3s;
+    top: 30vh;
+    height: 5vmin;
+    width: 5vmax;
+    background: #282c34;
+}
+
+.truck.right {
+    transition: all 3s;
+
+    right: 0;
+}
+
+.truck.left {
+    transition: all 3s;
+
+    left: 0;
+}
+
+.truck.site {
+    transition: all 3s;
+
+    left: 20vw;
+}
+
 
 ul,
 .ul {
@@ -652,7 +714,7 @@ ul,
     background: #073763;
     position: fixed;
     box-sizing: border-box;
-    z-index: 9; /*keep high*/
+    /*z-index: 9; !*keep high*!*/
 }
 
 #left, #right {

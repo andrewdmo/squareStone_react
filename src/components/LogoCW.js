@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import squareStone from '../assets/squareStone.jpg';
+import capturedWaste from '../assets/capturedWaste.jpg';
 import {NavLink} from "react-router-dom";
 
-export default class Logo extends Component {
+export default class LogoCW extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,7 +27,7 @@ export default class Logo extends Component {
         // console.log('updatePos: ' + updatePos);
 
         //change rotation on click
-        if (this.state.spin !== 'topLogo clockwise') {
+        if (this.state.spin !== 'topLogo CW clockwise') {
             this.setState({spin: 'topLogo clockwise'})
         } else {
             this.setState({spin: 'topLogo unclockwise'})
@@ -42,11 +42,11 @@ export default class Logo extends Component {
     render() {
         console.log('logoClick:' + this.state.spin);
 
-        const logoSpin = this.state.spin + ' shadow';
+        const logoSpinCW = this.state.spin + ' CW shadow';
 
         return (
-            <NavLink exact to="/">
-                <img src={squareStone} className={logoSpin} onClick={this.logoClick} alt="logo"/>
+            <NavLink exact to="/truck">
+                <img src={capturedWaste} className={logoSpinCW} onClick={this.logoClick} alt="logo"/>
             </NavLink>
         );
     }
