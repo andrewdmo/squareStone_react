@@ -23,26 +23,43 @@ export default class Truck extends Component {
         if (this.state.truck.truckLoc === 'right') {
             this.setState({
                 truck: {
-                    truckLoc: 'left'
+                    truckLoc: 'left',
+                    truckDump: 'false'
                 }
             });
             // console.log('right > left');
         } else if (this.state.truck.truckLoc === 'left') {
             this.setState({
                 truck: {
-                    truckLoc: 'site'
+                    truckLoc: 'site',
+                    truckDump: 'false'
                 }
             });
             // console.log('left > site');
 
-        } else {
+        } else if ((this.state.truck.truckLoc === 'site') && (this.state.truck.truckDump === false)) {
             this.setState({
                 truck: {
-                    truckLoc: 'right'
+                    truckLoc: 'site',
+                    truckDump: 'true'
                 }
             });
             // console.log('site > right');
-
+        } else {
+            this.setState({
+                    truck: {
+                        truckLoc: 'site',
+                        truckDump: 'false'
+                    }
+                }, () => {
+                    this.setState({
+                        truck: {
+                            truckLoc: 'right',
+                            truckDump: 'false'
+                        }
+                    })
+                }
+            )
         }
     }
 

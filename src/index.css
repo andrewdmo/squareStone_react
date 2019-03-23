@@ -151,11 +151,10 @@ input[type="button"]:focus {
 
 .clock {
     position: absolute;
-    float: left;
+    top: 0;
+    margin: 1vmax;
     color: #6396c7;
-    /*margin-top: 0;*/
-    /*bottom: 3rem;*/
-    /*top: 0;*/
+    font-size: small
 }
 
 .container {
@@ -462,7 +461,6 @@ li,
 
 .profile {
     position: absolute;
-    z-index: 6;
     top: 0;
     width: 100%;
     margin: 1vmin auto 0 auto;
@@ -473,9 +471,10 @@ li,
 }
 
 .profile.name {
-    z-index: 6;
-    will-change: color, border;
-    height: calc(20vh - 2.5em) !important; /*keep same as name*/
+    position: absolute;
+    will-change: auto;
+    /*height: calc(20vh - 2.5em) !important; !*keep same as name*!*/
+    height: 5vh !important;
     right: 0;
     max-width: calc(100% - 5vw); /*leave*/
     text-align: right;
@@ -485,7 +484,6 @@ li,
 
 .profile.pic {
     position: relative;
-    z-index: 5;
     will-change: scale, opacity;
     margin: 0;
     padding: 0;
@@ -638,17 +636,12 @@ tr:nth-child(even) {
     padding: 2vh; /*TODO: improve*/
 }
 
-.top.CW {
-    /*z-index: -1;*/
-}
-
 .topLogo {
     width: 20vmin;
     position: fixed;
     left: 5vw;
     top: 3vh;
     opacity: .6;
-    /*z-index: 8;*/
     transition: all 1s;
     will-change: auto;
 }
@@ -659,10 +652,6 @@ tr:nth-child(even) {
 
 .topLogo.unclockwise {
     animation: App-logo-spin2 infinite 20s linear;
-}
-
-.topLogo.CW {
-    /*z-index: 1;*/
 }
 
 .top1 {
