@@ -27,7 +27,7 @@ export default class LogoCW extends Component {
         // console.log('updatePos: ' + updatePos);
 
         //change rotation on click
-        if (this.state.spin !== 'topLogo CW clockwise') {
+        if (this.state.spin !== 'topLogo unclockwise') {
             this.setState({spin: 'topLogo clockwise'})
         } else {
             this.setState({spin: 'topLogo unclockwise'})
@@ -40,9 +40,9 @@ export default class LogoCW extends Component {
     };
 
     render() {
-        console.log('logoClick:' + this.state.spin);
+        console.log(this.state.spin);
 
-        const logoSpinCW = this.state.spin + ' CW shadow';
+        const logoSpinCW = this.state.spin + ' shadow';
 
         return (
             <NavLink exact to="/truck">

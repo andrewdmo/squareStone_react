@@ -673,6 +673,15 @@ tr:nth-child(even) {
     background: #282c34;
 }
 
+/*.truck.dump.false{*/
+/*rotation: 35deg;*/
+/*}*/
+
+.true {
+    transition: all 4s;
+    transform: rotate(35deg);
+}
+
 .truck.right {
     left: calc(100% - 5vmax);
 }

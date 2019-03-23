@@ -2,29 +2,24 @@ import React, {Component} from 'react';
 import LogoCW from "./LogoCW";
 
 
-export default class Truck extends Component {
+export default class TruckDump extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            isToggleOn: true,
-            spin: 'topLogo clockwise', //todo: cleanup vars
-            truck: {
-                truckLoc: 'right',
-                truckDump: false
-            }
-        };
-
+        this.state = {};
 
         // This binding is necessary to make `this` work in the callback
-        this.truckClick = this.truckClick.bind(this);
+        this.tiltDump = this.tiltDump.bind(this);
     }
 
-    truckClick() {
-        if (this.state.truck.truckLoc === 'right') {
+    tiltDump() {
+        if (this.props.truck.truckDump === false) {
+
+            const a = "" +
+                "<div className='truck down'";
             this.setState({
                 truck: {
                     truckLoc: 'left',
-                    truckDump: false
+                    truckDump: {a}
                 }
             });
             // console.log('right > left');
@@ -32,7 +27,7 @@ export default class Truck extends Component {
             this.setState({
                 truck: {
                     truckLoc: 'site',
-                    truckDump: false
+                    truckDump: 'false'
                 }
             });
             // console.log('left > site');
@@ -41,7 +36,7 @@ export default class Truck extends Component {
             this.setState({
                 truck: {
                     truckLoc: 'site',
-                    truckDump: true
+                    truckDump: 'true'
                 }
             });
             // console.log('site > right');
@@ -49,13 +44,13 @@ export default class Truck extends Component {
             this.setState({
                     truck: {
                         truckLoc: 'site',
-                        truckDump: false
+                        truckDump: 'false'
                     }
                 }, () => {
                     this.setState({
                         truck: {
                             truckLoc: 'right',
-                            truckDump: false
+                            truckDump: 'false'
                         }
                     })
                 }
@@ -64,9 +59,7 @@ export default class Truck extends Component {
     }
 
     render() {
-
-
-        const truckState = "truck " + this.state.truck.truckLoc + " " + this.state.truck.truckDump.toString();
+        const truckState = "truck " + this.state.truck.truckLoc + " " + this.state.truck.truckDump;
 
         console.log(truckState);
 
