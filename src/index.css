@@ -204,11 +204,11 @@ input[type="button"]:focus {
     height: 100%;
     min-height: 150vmax;
     background: linear-gradient(
-    to bottom right, lightsteelblue,
-    #8d8a7e) no-repeat fixed; /*X% how far gradient (middle) is*/
+            to bottom right, lightsteelblue,
+            #8d8a7e) no-repeat fixed; /*X% how far gradient (middle) is*/
 }
 
-.indexBack.CW{
+.indexBack.CW {
     background-image: url('./assets/capturedWaste.jpg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -677,7 +677,7 @@ tr:nth-child(even) {
 .truck {
     position: absolute;
     z-index: 10;
-    transition: all 3s;
+    transition: all 3s ease;
     top: 30vh;
     height: 5vmin;
     width: 5vmax;
@@ -685,21 +685,16 @@ tr:nth-child(even) {
 }
 
 .truck.right {
-    transition: all 3s;
-
-    right: 0;
+    left: calc(100% - 5vmax);
 }
 
 .truck.left {
-    transition: all 3s;
-
     left: 0;
 }
 
 .truck.site {
-    transition: all 3s;
-
     left: 20vw;
+    /*transition: all 3s ease-out;*/
 }
 
 

@@ -10,7 +10,7 @@ export default class Truck extends Component {
             spin: 'topLogo clockwise', //todo: cleanup vars
             truck: {
                 truckLoc: 'right',
-                truckDump: 'down'
+                truckDump: false
             }
         };
 
@@ -26,22 +26,22 @@ export default class Truck extends Component {
                     truckLoc: 'left'
                 }
             });
-            console.log('right > left');
+            // console.log('right > left');
         } else if (this.state.truck.truckLoc === 'left') {
             this.setState({
                 truck: {
                     truckLoc: 'site'
                 }
             });
-            console.log('left > site');
+            // console.log('left > site');
 
-        } else if (this.state.truck.truckLoc === 'site') {
+        } else {
             this.setState({
                 truck: {
                     truckLoc: 'right'
                 }
             });
-            console.log('site > right');
+            // console.log('site > right');
 
         }
     }
