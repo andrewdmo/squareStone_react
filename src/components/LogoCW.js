@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import capturedWaste from '../assets/capturedWaste.jpg';
+import CW_Back from '../assets/CW_backFinal.jpg';
 import {NavLink} from "react-router-dom";
 
 export default class LogoCW extends Component {
@@ -46,7 +46,7 @@ export default class LogoCW extends Component {
 
         return (
             <NavLink exact to="/truck">
-                <img src={capturedWaste} className={logoSpinCW} onClick={this.logoClick} alt="logo"/>
+                <img src={CW_Back} className={logoSpinCW} onClick={this.logoClick} alt="logo"/>
             </NavLink>
         );
     }

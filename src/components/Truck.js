@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import LogoCW from "./LogoCW";
 
 
 export default class Truck extends Component {
@@ -72,7 +71,6 @@ export default class Truck extends Component {
 
         return (
             <div>
-                <LogoCW/>
                 <div
                     className={truckState}
                     onClick={this.truckClick}/>

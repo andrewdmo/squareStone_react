@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Clock from "./IndexTopCW";
 
 export default class TitleBarCW extends Component {
 
@@ -7,7 +6,6 @@ export default class TitleBarCW extends Component {
         return (
             <div>
                 <div className="profile name">
-
                     <p className="text shadow link">CWTE
                     </p>
 

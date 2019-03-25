@@ -65,7 +65,6 @@ export default class TruckDump extends Component {
 
         return (
             <div>
-                <LogoCW/>
                 <div
                     className={truckState}
                     onClick={this.truckClick}/>
